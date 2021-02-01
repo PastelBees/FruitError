@@ -42,14 +42,17 @@ class Game{
 
                 Player.getPlayerInfo();
                  image(back_img, 0, 0, 1000, 800);
+                    var x=100 ;
+                    var y=200;
+                    var index =0;
+        
+                    drawSprites();
                 
                  if(allPlayers !== undefined){
                  
                  for(var plr in allPlayers){
                     
-                    var x=100 ;
-                    var y=200;
-                    var index =0;
+
 
                      index = index+1;
                      x = 500-allPlayers[plr].distance;
@@ -57,7 +60,6 @@ class Game{
                      
                      players[index -1].x = x;
                      players[index - 1].y = y;
-                     drawSprites();
                      
                      if(index === player.index){
                          
